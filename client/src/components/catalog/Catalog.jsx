@@ -1,5 +1,6 @@
-import gameService from "../../services/gameService"
-import { useEffect } from "react"
+import gameService from "../../services/gameService.js"
+import { useEffect, useState } from "react"
+import GameItem from "./catalog-item/GameItem"
 
 export default function Catalog(){
 
@@ -7,7 +8,8 @@ export default function Catalog(){
 
     useEffect(() => {
         gameService.getAll()
-        .then(result => {
+        .then(result => { 
+            console.log(result);         
             setGames(result)
         })
     }, [])
@@ -16,36 +18,11 @@ export default function Catalog(){
 
         <section id="catalog-page">
             <h1>All Games</h1>
-            {/* <!-- Display div: with information about every game (if any) --> */}
-            <div className="allGames">
-                <div className="allGames-info">
-                    <img src="/images/avatar-1.jpg" />
-                    <h6>Action</h6>
-                    <h2>Cover Fire</h2>
-                    <a href="#" className="details-button">Details</a>
-                </div>
 
-            </div>
-            <div className="allGames">
-                <div className="allGames-info">
-                    <img src="/images/avatar-1.jpg" />
-                    <h6>Action</h6>
-                    <h2>Zombie lang</h2>
-                    <a href="#" className="details-button">Details</a>
-                </div>
+            {games.length > 0
+                ? games.map(game => <GameItem key={game._id} {...game} />)
+                : <h3 className="no-articles">No articles yet</h3>}
 
-            </div>
-            <div className="allGames">
-                <div className="allGames-info">
-                    <img src="/images/avatar-1.jpg" />
-                    <h6>Action</h6>
-                    <h2>MineCraft</h2>
-                    <a href="#" className="details-button">Details</a>
-                </div>
-            </div>
-
-            {/* <!-- Display paragraph: If there is no games  --> */}
-            <h3 className="no-articles">No articles yet</h3>
         </section>
     )
 }
