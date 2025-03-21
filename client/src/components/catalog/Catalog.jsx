@@ -1,4 +1,16 @@
+import gameService from "../../services/gameService"
+import { useEffect } from "react"
+
 export default function Catalog(){
+
+    const [games, setGames] = useState([])
+
+    useEffect(() => {
+        gameService.getAll()
+        .then(result => {
+            setGames(result)
+        })
+    }, [])
 
     return (
 

@@ -1,0 +1,26 @@
+{
+    "94b7127b-827f-43e0-b7ab-c2cae0180ff1": {
+        "title": "Need For Speed Underground",
+        "category": "Race",
+        "maxLevel": "100",
+        "imageUrl": "https://static.wixstatic.com/media/10e7b3_330034781ccb44b6b907e81941ce668e~mv2.jpg/v1/fill/w_480,h_686,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/10e7b3_330034781ccb44b6b907e81941ce668e~mv2.jpg",
+        "summary": "Need for Speed: Underground is a 2003 racing video game and the seventh installment in the Need for Speed series following Hot Pursuit 2. It was developed by EA Black Box and published by Electronic Arts.",
+        "_id": "94b7127b-827f-43e0-b7ab-c2cae0180ff1"
+    },
+    "4b9fdd8e-bead-4023-ab37-dacb8fe59586": {
+        "title": "GTA Vice City",
+        "category": "Lifestyle",
+        "maxLevel": "100",
+        "imageUrl": "https://i.pcmag.com/imagery/articles/02yIl1hE2zxgbDXJNEpJ5kr-1..v1701746046.png",
+        "summary": "Grand Theft Auto: Vice City is a 2002 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the fourth main game in the Grand Theft Auto series, following 2001's Grand Theft Auto III, and the sixth entry overall.",
+        "_id": "4b9fdd8e-bead-4023-ab37-dacb8fe59586"
+    },
+    "7a13d337-c01e-403d-ab59-764274df683c": {
+        "title": "FIFA 16",
+        "category": "Sports",
+        "maxLevel": "94",
+        "imageUrl": "https://cdn.ozone.bg/media/catalog/product/f/i/fifa-16-ps4_18.jpg",
+        "summary": "FIFA 16 is a football simulation video game developed by EA Canada and published by Electronic Arts under the EA Sports label. It was released for Microsoft Windows, PlayStation 3, PlayStation 4, Xbox 360, Xbox One, Android and iOS. The game is the first in the FIFA series to include female players.",
+        "_id": "7a13d337-c01e-403d-ab59-764274df683c"
+    }
+}
