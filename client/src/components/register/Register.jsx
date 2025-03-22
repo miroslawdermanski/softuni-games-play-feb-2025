@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Register(){
 
     return (
@@ -19,7 +21,7 @@ export default function Register(){
                     <input className="btn submit" type="submit" value="Register" />
 
                     <p className="field">
-                        <span>If you already have profile click <a href="/login">here</a></span>
+                        <span>If you already have profile click <Link to="/login">here</Link></span>
                     </p>
                 </div>
             </form>
