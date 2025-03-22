@@ -4,7 +4,9 @@ import gameService from "../../services/gameService"
 import Comments from "../comments-show/CommentsShow"
 import CommentCreate from "../comments-create/CommentCreate"
 
-export default function GameDetails(){
+export default function GameDetails({
+    email,
+}){
 
     const {gameId} = useParams()
     const [game, setGame] = useState({})
@@ -62,7 +64,7 @@ export default function GameDetails(){
 
             {/* <!-- Bonus --> */}
             {/* <!-- Add Comment ( Only for logged-in users, which is not creators of the current game ) --> */}
-            <CommentCreate />
+            <CommentCreate email={email} />
 
         </section>
     )

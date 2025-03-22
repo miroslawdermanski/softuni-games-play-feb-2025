@@ -29,7 +29,7 @@ function App() {
                         <Route path="/register" element={<Register />} />
                         <Route path="/games/create" element={<GameCreate/>} />
                         <Route path="/games" element={<Catalog/>} />
-                        <Route path="/games/:gameId/details" element={<GameDetails/>} />
+                        <Route path="/games/:gameId/details" element={<GameDetails email={email} />} />
                         <Route path="/games/:gameId/edit" element={<GameEdit/>} />
                     </Routes>
                 </main>
