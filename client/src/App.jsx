@@ -12,12 +12,12 @@ import { useState } from 'react'
 
 function App() {
 
-    const [email, setEmail] = useState('')
+    const [authData, setAuthData] = useState({})
 
-    const userLoginHandler = (authData) => {
+    const userLoginHandler = (resultData) => {
         console.log(authData);
         
-        setEmail(authData.email)
+        setAuthData(resultData)
     }
 
     return (
@@ -31,7 +31,7 @@ function App() {
                         <Route path="/register" element={<Register />} />
                         <Route path="/games/create" element={<GameCreate/>} />
                         <Route path="/games" element={<Catalog/>} />
-                        <Route path="/games/:gameId/details" element={<GameDetails email={email} />} />
+                        <Route path="/games/:gameId/details" element={<GameDetails email={authData.email} />} />
                         <Route path="/games/:gameId/edit" element={<GameEdit/>} />
                     </Routes>
                 </main>
