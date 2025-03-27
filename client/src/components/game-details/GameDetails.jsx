@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router"
 import gameService from "../../services/gameService"
 import CommentsShow from "../comments-show/CommentsShow"
 import CommentCreate from "../comments-create/CommentCreate"
 import commentService from "../../services/commentService"
+import { UserContext } from "../../contexts/UserContext"
 
-export default function GameDetails({email}){
+export default function GameDetails(){
 
     const {gameId} = useParams()
+    const {email} = useContext(UserContext)
     const [game, setGame] = useState({})
     const [comments, setComments] = useState([])
     const navigate = useNavigate()
