@@ -8,8 +8,7 @@ export default function Catalog(){
 
     useEffect(() => {
         gameService.getAll()
-        .then(result => { 
-            console.log(result);         
+        .then(result => {         
             setGames(result)
         })
     }, [])
