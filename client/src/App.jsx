@@ -16,10 +16,10 @@ function App() {
     const [authData, setAuthData] = useState({})
 
     const userLoginHandler = (resultData) => {
-        console.log(authData);
         
         setAuthData(resultData)
     }
+    
 
     return (
         <UserContext.Provider value={{...authData, userLoginHandler}}>

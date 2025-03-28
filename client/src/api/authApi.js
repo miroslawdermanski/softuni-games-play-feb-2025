@@ -5,23 +5,31 @@ const baseURL = 'http://localhost:3030/users'
 
 export const useLogin = () => {
 
-    const abortRef = useRef(new AbortController())
-
     const login = async (email, password) => {
 
-        const result = await request.post(`${baseURL}/login`, {email, password}, {signal: abortRef.current.signal})
+        request.post(
+            `${baseURL}/login`, 
+            {email, password}, 
+        )
 
-        return result
     }
-
-    useEffect(() => {
- 
-        const abortController = abortRef.current
-
-        return () => abortController.abort()
-    }, [])
 
     return {
         login,
+    }
+}
+
+export const useRegister = () => {
+
+    const register = async (email, password) => {
+
+        request.post(
+            `${baseURL}/register`, 
+            {email, password}
+        )
+    }
+
+    return {
+        register,
     }
 }
