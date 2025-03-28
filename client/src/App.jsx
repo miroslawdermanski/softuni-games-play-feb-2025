@@ -34,6 +34,7 @@ function App() {
                         <Route path="/games" element={<Catalog/>} />
                         <Route path="/games/:gameId/details" element={<GameDetails />} />
                         <Route path="/games/:gameId/edit" element={<GameEdit/>} />
+                        <Route path="/logout" element={<Logout />} />
                     </Routes>
                 </main>
             </div>
